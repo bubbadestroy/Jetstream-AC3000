@@ -493,3 +493,5 @@ https://mcmillan.website/openwrt-ws-wn529b3/
 https://play.google.com/store/apps/developer?id=WiLink.APP&hl=en_US
 
 https://ematic.zendesk.com/hc/en-us/articles/360021348313-ERAC3000
+
+https://forum.dd-wrt.com/phpBB2/viewtopic.php?p=1183408&sid=5005cba771e7a8a312f7352275e0ad18
