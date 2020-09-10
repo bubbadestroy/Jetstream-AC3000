@@ -1,4 +1,3 @@
-https://tinyurl.com/ws-wn536a8-git-parentsource
 
 # DIRTY FLASH OPENWRT on the following
 
