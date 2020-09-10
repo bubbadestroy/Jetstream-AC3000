@@ -1,3 +1,4 @@
+https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=51b653de94e7e5006b5480df33d5dfd9de824cc7
 
 # DIRTY FLASH OPENWRT on the following
 
