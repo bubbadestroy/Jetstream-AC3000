@@ -1,9 +1,19 @@
+# 2021-NOV SAFETY AND PRIVACY NOTICE
+
+No suprise, the apps for said devices should be assumed to be a tool for backdoor as well
+
+## Walmart-exclusive routers can control devices via hidden backdoors (Wavlink, Jetstream)
+https://youtu.be/K-o0U8sQh-c
+
+
+
+
 https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=51b653de94e7e5006b5480df33d5dfd9de824cc7
 
-# DIRTY FLASH OPENWRT on the following
+## DIRTY FLASH OPENWRT on the following
 
 Model Difference Statement: "We would like to confirm the models:
-
+https://www.youtube.com/watch?v=K-o0U8sQh-c&t=13s
     • WS-WN536A8, WS-WN533A8, ARK T6, Quantum Max, Quantum T10, Quantum T12,
     • Quantum D4C, Quantum D4, Quantum D6Q, Quantum D6, Quantum T8, Quantum T6
     are same in all respects. Only the model name and appearance is different.
@@ -11,9 +21,14 @@ Model Difference Statement: "We would like to confirm the models:
 
 https://fccid.io/NZ3-WN536A8/Letter/Model-Difference-Statement-3975614
 
-  # Bubba finally destroy stock firmware and destroy the flash, but fix it easy with luci intact!
- # Thanks everyone mentioned below and those who I don't know yet to credit.. .. So glad this got done! 
-# Jetstream-AC3000 # EMATIC ERAC3000 # WAVLINK # WINSTAR # WINSTARS # DLINK and more?
+  ## Bubba finally destroy stock firmware and destroy the flash, but fix it easy with luci intact!
+ ## Thanks everyone mentioned below and those who I don't know yet to credit.. .. So glad this got done! 
+## Jetstream-AC3000 
+## EMATIC ERAC3000 
+## WAVLINK 
+## WINSTAR 
+## WINSTARS 
+
 
 
  instructions to work for the above router Openwrt for Wavlink WL-WN531A6 ( or whatever your similiar model is )
