@@ -1,16 +1,23 @@
-# 2021-NOV SAFETY AND PRIVACY NOTICE
+More reason  than ever to wipe that firmware and install fresh openwrt.
+
+# 2021-NOV SAFETY AND PRIVACY NOTICE  RCE – CVE-2020-10971 and CVE-2020-10972****
+
+https://james-clee.com/2020/04/18/multiple-wavlink-vulnerabilities/
 
 No suprise, the apps for said devices should be assumed to be a tool for backdoor as well
 
-## Walmart-exclusive routers can control devices via hidden backdoors (Wavlink, Jetstream)
+## Walmart-exclusive routers can control devices via hidden backdoors (Wavlink, Jetstream, Ematic)
+
 https://youtu.be/K-o0U8sQh-c
 
 
+# DIRTY FLASH OPENWRT on the following and shut the stock firmware backdoor for good.
 
 
 https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=51b653de94e7e5006b5480df33d5dfd9de824cc7
 
-## DIRTY FLASH OPENWRT on the following
+## *Note* As of now 5ghz module on radio2 seems to not cleanly flash with the below method. It would require building openwrt from 'make menu' command with that module selected in the build options.
+
 
 Model Difference Statement: "We would like to confirm the models:
 https://www.youtube.com/watch?v=K-o0U8sQh-c&t=13s
