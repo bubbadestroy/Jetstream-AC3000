@@ -1,21 +1,9 @@
-
-
-<br><p>## DIRTY FLASH OPENWRT on the following and shut the stock firmware backdoor for good.
-<br>https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=51b653de94e7e5006b5480df33d5dfd9de824cc7
-
-
-<br><p>### *Note* As of now 5ghz module on radio2 seems to not cleanly flash with the below method. It would require building openwrt from 'make menu' command with that module selected in the build options.
-
-
-<br><p>## 2021-NOV SAFETY AND PRIVACY NOTICE  RCE – CVE-2020-10971 and CVE-2020-10972****
+<br><p><b> DIRTY FLASH OPENWRT on the following and shut the stock firmware backdoor for good.</b><br>https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=51b653de94e7e5006b5480df33d5dfd9de824cc7
+<br><p><b> *Note* As of now 5ghz module on radio2 seems to not cleanly flash with the below method. It would require building openwrt from 'make menu' command with that module selected in the build options.</b>
+<br><p><b> 2021-NOV SAFETY AND PRIVACY NOTICE  RCE – CVE-2020-10971 and CVE-2020-10972****</b>
 <br>https://james-clee.com/2020/04/18/multiple-wavlink-vulnerabilities/
-
-<br><p>See also:
-<br><p>
-### Walmart-exclusive routers can control devices via hidden backdoors (Wavlink, Jetstream, Ematic)
-<br>https://www.youtube.com/watch?v=K-o0U8sQh-c&t=13s
-<br><p>
-
+<br><p>See also:<br><p>
+<b> Walmart-exclusive routers can control devices via hidden backdoors (Wavlink, Jetstream, Ematic)</b><br>https://www.youtube.com/watch?v=K-o0U8sQh-c&t=13s<br><p>
 No suprise, as these models and their associated android/ios wavlink/winstars apps for said devices should be assumed to be vuln to backdoor as well:
 <br><p>
 FCC Model Difference Statement: "We would like to confirm the models:
@@ -25,65 +13,59 @@ FCC Model Difference Statement: "We would like to confirm the models:
     <br>The model WS-WN536A8 is the tested sample. "
 <br><p>https://fccid.io/NZ3-WN536A8/Letter/Model-Difference-Statement-3975614
 
-<br><p>ALL THE MORE REASON than ever to wipe that firmware and install fresh openwrt.
-
-### Bubba finally destroy stock firmware and destroy the flash, but fix it easy with luci intact!
-### Thanks everyone mentioned below and those who I don't know yet to credit.. .. So glad this got done! 
-### Jetstream-AC3000 ## EMATIC ERAC3000 ## WAVLINK ## WINSTAR ## WINSTARS 
-
-Instructions to work for the above router Openwrt for Jetstream AC3000 Tri-Band EMATIC Winstars WS-WN536A8 ( Or from any model type above FCC Model Statement, as they are all the same)
-
-ORIGINAL SOURCE OPENWRT INSTRUCTIONS MODIFIED FROM:
+<br><p><b>ALL THE MORE REASON than ever to wipe that firmware and install fresh openwrt.</b><br><p>
+Bubba finally destroy stock firmware and destroy the flash, but fix it easy with luci intact!
+<br>Thanks and fanfare to everyone mentioned below and those who I don't know yet to credit.. .. So glad this got done! 
+	<br><b><p>Jetstream-AC3000  EMATIC  ERAC3000  WAVLINK  WINSTAR  WINSTARS <br></b><p>
+Instructions should work for the above router Openwrt for Jetstream AC3000 Tri-Band EMATIC Winstars WS-WN536A8 (Or from any model type above FCC Model Statement, as they are all the same)
+<br><p>
+ORIGINAL SOURCE OPENWRT INSTRUCTIONS MODIFIED FROM<br>
 https://openwrt.org/toh/wavlink/wavlink_wl-wn531a6
-
+<br><p>
 https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=51b653de94e7e5006b5480df33d5dfd9de824cc7
-
-# Suggested that you backup your config and then factory reset first.
-# Format a FAT32 USB and place it in the WS-WN536A8 usb
-# go to the following address
-
+<br><p>
+<b>Suggested that you backup your config and then factory reset first.</b><br>
+Format a FAT32 USB and place it in the WS-WN536A8 usb<br>
+Go to the following address</br><p>
   192.168.10.1/webcmd.shtml
-
-# copy and paste this
-
+<br>
+ copy and paste this
+<br>
   dd if=/dev/mtd4ro of=/media/sda1/firmware.bin
-
+<br><p>
 Backup the OEM Firmware:
------------------------
-
-There isn't any firmware released for the WS-WN536A8 on
-the Wavlink/Winstar/Ematic web site. Reverting back to the OEM firmware is
-not possible unless we have a backup of the original OEM
-firmware.
-
-The OEM firmware is stored on /dev/mtd4 ("Kernel").
-
-  1) Plug a FAT32 formatted USB flash drive into the USB port.
-  2) Navigate to "Setup->USB Storage". Under the "Available
+<br>-----------------------
+<br><p>
+There isn't any firmware released for the WS-WN536A8 on the Wavlink/Winstar/Ematic web site.<br>
+Reverting back to the OEM firmware is not possible unless we have a backup of the original OEM firmware.<br>
+<p>The OEM firmware is stored on /dev/mtd4 ("Kernel").<br><p>
+<br><p>1) Plug a FAT32 formatted USB flash drive into the USB port.
+<br><p>2) Navigate to "Setup->USB Storage". Under the "Available
      Network folder" you can see part of the mount point of
      the newly mounted flash drive filesystem - e.g "sda1".
      The full mount point is prefixed with "/media", so in
      this case the mount point becomes "/media/sda1".
-  3) Go to http://192.168.10.1/webcmd.shtml .
-  4) Type the following line in the "Command" input box:
-
+  <br><p>3) Go to http://192.168.10.1/webcmd.shtml .
+  <br><p>4) Type the following line in the "Command" input box:
+<p>
      dd if=/dev/mtd4ro of=/media/sda1/firmware.bin
-
-  5) Click "Apply"
-  6) After few seconds, in the text area should appear this
+<p>
+  <br>5) Click "Apply"
+  <br>6) After few seconds, in the text area should appear this
      output:
-
-        30080+0 records in
-      30080+0 records out
-
-  7) Type "sync" in the "Command" input box and click "Apply".
-  8) At this point the OEM firmware is stored on the flash
+<p>
+     <br>   30080+0 records in
+      <br>30080+0 records out
+<p>
+  <br>7) Type "sync" in the "Command" input box and click "Apply".
+  <br>8) At this point the OEM firmware is stored on the flash
      drive as "firmware.bin". The size of the file is 15040 KB.
-
-# Last chance to look around the old shit interface 
-# ls -la or whatever you want from
+<p>
+	<b><br> Last chance to look around the manufacturer power user neuterd interface, then feel free to issue commands in box located <br>
 http://192.168.10.1/webcmd.shtml
-
+<p>for example;</b><p>
+	ls -la or other possibly: openwrt / shell / cmd </b>
+<br><p>
 	-rwxr-xr-x    1 0        0           62384 nas.cgi
 -rwxr-xr-x    1 0        0           66847 login.cgi
 -rwxr-xr-x    1 0        0           18963 upload.cgi
@@ -101,58 +83,44 @@ http://192.168.10.1/webcmd.shtml
 -rwxr-xr-x    1 0        0           57950 applogin.cgi
 -rwxr-xr-x    1 0        0           93639 makeRequest.cgi
 -rwxr-xr-x    1 0        0           57482 ddns.cgi
-
-
-## PREFLASH WARNING ( I had no LUCI at first, but found the work around just fine and now have luci )
-
-
-
-Installation:
-------------
-
-* Flashing instructions (OEM web interface):
+<br><p>
+<b>PREFLASH WARNING: I had no LUCI at first, but found the work around just fine and now have LUCI</b><br><p>
+<b>Installation</b><br><p>
+<b>*Flashing instructions: Using OEM web browser dashboard interface:</b>
 The OEM web interface accepts only files with names containing
 "WN536A8". It's also impossible to flash the *-sysupgrade.bin
 image, so we have to flash the *-initramfs-kernel.bin first and
 use the OpenWrt's upgrade interface to write the sysupgrade
 image.
-
+<br><p>
   1) Rename openwrt-ramips-mt7621-wavlink_wl-wn531a6-initramfs-kernel.bin
-     to WS-WN536A8.bin.
+     to WS-WN536A8.bin.<br>
   2) Connect your computer to the one of the LAN ports of the
-     router with an Ethernet cable and open http://192.168.10.1
-  3) Browse to Setup -> Firmware Upgrade interface.
-  4) Upload the (renamed) OpenWrt image - WN536A8.bin.
+     router with an Ethernet cable and open http://192.168.10.1<br>
+  3) Browse to Setup -> Firmware Upgrade interface.<br>
+  4) Upload the (renamed) OpenWrt image - WN536A8.bin.<br>
   5) Proceed with the firmware installation and give the device
-     a few minutes to finish and reboot.
-# I didnt have LUCI at first so.. again a WARNING The next few steps are due to the original guide comming from another model (same hardware, but be warned, likely bugs) make sure to be in /tmp directory
-
-
-Go to a powershell or use putty 
-
-ping 192.168.1.1
-ctrl-c
-ssh root@192.168.1.1
-cd /temp
-wget http://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-wavlink_wl-wn531a6-squashfs-sysupgrade.bin
-sysupgrade openwrt-ramips-mt7621-wavlink_wl-wn531a6-squashfs-sysupgrade.bin
-
-
-# and wait for some time to let it get an ip or
-
-sync
-ping 192.168.1.1
-ctrl-c
-ssh root@192.168.1.1
-cd /temp
-
-opkg install  uhttpd uhttpd-mod-ubus libiwinfo-lua luci-base luci-app-firewall luci-mod-admin-full luci-theme-bootstrap
-
-sync
-
-
-root@OpenWrt:/# dmesg
-[    0.000000] Linux version 5.4.61 (builder@buildhost) (gcc version 8.4.0 (OpenWrt GCC 8.4.0 r14391-7f676b5ed6)) #0 SMP Sat Sep 5 13:43:16 2020
+     a few minutes to finish and reboot.<br><p>
+	<b> I didnt have LUCI at first so.. again a WARNING</b><br>
+The next few steps are due to the original guide comming from another model (same hardware, but be warned, likely bugs) make sure to be in /tmp directory
+<p>
+<br>Go to a powershell or use putty<br>
+ping 192.168.1.1<br>
+ctrl-c<br>
+ssh root@192.168.1.1<br>
+cd /temp<br>
+wget http://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-wavlink_wl-wn531a6-squashfs-sysupgrade.bin<br>
+sysupgrade openwrt-ramips-mt7621-wavlink_wl-wn531a6-squashfs-sysupgrade.bin<br>
+<b>and wait for some time to let it get an ip otherwise,</b><br>
+sync<br>
+ping 192.168.1.1<br>
+ctrl-c<br>
+ssh root@192.168.1.1<br>
+cd /temp<br>
+opkg install uhttpd uhttpd-mod-ubus libiwinfo-lua luci-base luci-app-firewall luci-mod-admin-full luci-theme-bootstrap<br>
+sync<br><p>
+root@OpenWrt: dmesg
+[    0.000000] Linux version 5.4.61 (builder@buildhost) (gcc version 8.4.0 (OpenWrt GCC 8.4.0 r14391-7f676b5ed6)) 0 SMP Sat Sep 5 13:43:16 2020
 [    0.000000] SoC Type: MediaTek MT7621 ver:1 eco:3
 [    0.000000] printk: bootconsole [early0] enabled
 [    0.000000] CPU0 revision is: 0001992f (MIPS 1004Kc)
@@ -292,12 +260,12 @@ root@OpenWrt:/# dmesg
 [    1.652562] pci 0000:00:00.0: reg 0x10: [mem 0x00000000-0x7fffffff]
 [    1.665064] pci 0000:00:00.0: reg 0x14: [mem 0x60400000-0x6040ffff]
 [    1.677624] pci 0000:00:00.0: supports D1
-[    1.685617] pci 0000:00:00.0: PME# supported from D0 D1 D3hot
+[    1.685617] pci 0000:00:00.0: PME supported from D0 D1 D3hot
 [    1.697483] pci 0000:00:01.0: [0e8d:0801] type 01 class 0x060400
 [    1.709499] pci 0000:00:01.0: reg 0x10: [mem 0x00000000-0x7fffffff]
 [    1.721996] pci 0000:00:01.0: reg 0x14: [mem 0x60410000-0x6041ffff]
 [    1.734543] pci 0000:00:01.0: supports D1
-[    1.742535] pci 0000:00:01.0: PME# supported from D0 D1 D3hot
+[    1.742535] pci 0000:00:01.0: PME supported from D0 D1 D3hot
 [    1.755506] pci 0000:01:00.0: [14c3:7615] type 00 class 0x000280
 [    1.767545] pci 0000:01:00.0: reg 0x10: [mem 0x00000000-0x000fffff 64bit]
 [    1.781241] pci 0000:01:00.0: 2.000 Gb/s available PCIe bandwidth, limited by 2.5 GT/s x1 link at 0000:00:00.0 (capable of 4.000 Gb/s with 5 GT/s x1 link)
@@ -409,7 +377,7 @@ root@OpenWrt:/# dmesg
 [   19.612590] ------------[ cut here ]------------
 [   19.622052] WARNING: CPU: 0 PID: 19 at backports-5.8-1/net/wireless/core.c:872 wiphy_register+0xd80/0xd88 [cfg80211]
 [   19.643068] Modules linked in: pppoe ppp_async iptable_nat xt_state xt_nat xt_conntrack xt_REDIRECT xt_MASQUERADE xt_FLOWOFFLOAD xt_CT pppox ppp_generic nf_nat nf_flow_table_hw nf_flow_table nf_conntrack_rtcache nf_conntrack mt7615e mt7615_common mt7603e mt76 mac80211 ipt_REJECT cfg80211 xt_time xt_tcpudp xt_multiport xt_mark xt_mac xt_limit xt_comment xt_TCPMSS xt_LOG slhc nf_reject_ipv4 nf_log_ipv4 nf_defrag_ipv6 nf_defrag_ipv4 iptable_mangle iptable_filter ip_tables crc_ccitt compat nf_log_ipv6 nf_log_common ip6table_mangle ip6table_filter ip6_tables ip6t_REJECT x_tables nf_reject_ipv6 leds_gpio xhci_plat_hcd xhci_pci xhci_mtk xhci_hcd gpio_button_hotplug usbcore nls_base usb_common
-[   19.764451] CPU: 0 PID: 19 Comm: kworker/u4:1 Not tainted 5.4.61 #0
+[   19.764451] CPU: 0 PID: 19 Comm: kworker/u4:1 Not tainted 5.4.61 0
 [   19.776945] Workqueue: phy0 0x873f42e0
 [   19.784398] Stack : 806576d8 87cbdc7c 806d0000 80720000 87cb4080 80668ee4 8738123c 00000009
 [   19.801029]         86c75908 00000001 00000004 8007d624 00000000 00000001 87cbdc38 d999a5ca
@@ -480,34 +448,17 @@ root@OpenWrt:/# dmesg
 [ 1247.984304] kmodloader: loading kernel modules from /etc/modules.d/*
 [ 1247.999302] kmodloader: done loading kernel modules from /etc/modules.d/*
 
-
-
-# padavan, etc, and other
-
-# FIRMWARE
-https://www.mediafire.com/file/80a80u2155vt0ta/WN533A8-WAVLINK-20181109/file
-
-# Thank you source here:
-https://forum.openwrt.org/t/mt7621-bricked/24802
-
-
-
-# Thank you guy who backed up the entire deviwiki keeping it alive with updates here:
-http://en.techinfodepot.shoutwiki.com/wiki/Winstars_WS-WN536A8
-
-
-# Connor; Thank you reverse engineer here:
-https://mcmillan.website/openwrt-for-wl-wn575a3/
-
-https://mcmillan.website/rewriting-mt7628an-bootloader/
-
-https://mcmillan.website/openwrt-ws-wn529b3/
-
-
-# The Resellers with amazing stock firmware
-
-https://play.google.com/store/apps/developer?id=WiLink.APP&hl=en_US
-
-https://ematic.zendesk.com/hc/en-us/articles/360021348313-ERAC3000
-
-https://forum.dd-wrt.com/phpBB2/viewtopic.php?p=1183408&sid=5005cba771e7a8a312f7352275e0ad18
+<b>FIRMWARE</b><br>
+https://www.mediafire.com/file/80a80u2155vt0ta/WN533A8-WAVLINK-20181109/file<p><br>
+<b>Thank you source here:</b><br>
+https://forum.openwrt.org/t/mt7621-bricked/24802<p><br>
+<b>Thank you guy who backed up the entire deviwiki keeping it alive with updates here:</b><br>
+http://en.techinfodepot.shoutwiki.com/wiki/Winstars_WS-WN536A8<br><p>
+<b>Connor; Thank you reverse engineer here:</b><br>
+https://mcmillan.website/openwrt-for-wl-wn575a3/<br>
+https://mcmillan.website/rewriting-mt7628an-bootloader/<br>
+https://mcmillan.website/openwrt-ws-wn529b3/<br><p>
+<b> The Resellers with amazing stock firmware</b><br>
+https://play.google.com/store/apps/developer?id=WiLink.APP&hl=en_US<br>
+https://ematic.zendesk.com/hc/en-us/articles/360021348313-ERAC3000<br>
+https://forum.dd-wrt.com/phpBB2/viewtopic.php?p=1183408&sid=5005cba771e7a8a312f7352275e0ad18<br>
