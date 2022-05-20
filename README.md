@@ -1,33 +1,35 @@
-# DIRTY FLASH OPENWRT on the following and shut the stock firmware backdoor for good.
-https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=51b653de94e7e5006b5480df33d5dfd9de824cc7
 
 
-## *Note* As of now 5ghz module on radio2 seems to not cleanly flash with the below method. It would require building openwrt from 'make menu' command with that module selected in the build options.
+<br><p>## DIRTY FLASH OPENWRT on the following and shut the stock firmware backdoor for good.
+<br>https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=51b653de94e7e5006b5480df33d5dfd9de824cc7
 
 
-# 2021-NOV SAFETY AND PRIVACY NOTICE  RCE – CVE-2020-10971 and CVE-2020-10972****
-https://james-clee.com/2020/04/18/multiple-wavlink-vulnerabilities/
+<br><p>### *Note* As of now 5ghz module on radio2 seems to not cleanly flash with the below method. It would require building openwrt from 'make menu' command with that module selected in the build options.
 
-See also:
 
-## Walmart-exclusive routers can control devices via hidden backdoors (Wavlink, Jetstream, Ematic)
-https://www.youtube.com/watch?v=K-o0U8sQh-c&t=13s
+<br><p>## 2021-NOV SAFETY AND PRIVACY NOTICE  RCE – CVE-2020-10971 and CVE-2020-10972****
+<br>https://james-clee.com/2020/04/18/multiple-wavlink-vulnerabilities/
 
+<br><p>See also:
+<br><p>
+### Walmart-exclusive routers can control devices via hidden backdoors (Wavlink, Jetstream, Ematic)
+<br>https://www.youtube.com/watch?v=K-o0U8sQh-c&t=13s
+<br><p>
 
 No suprise, as these models and their associated android/ios wavlink/winstars apps for said devices should be assumed to be vuln to backdoor as well:
-
+<br><p>
 FCC Model Difference Statement: "We would like to confirm the models:
-    • WS-WN536A8, WS-WN533A8, ARK T6, Quantum Max, Quantum T10, Quantum T12,
-    • Quantum D4C, Quantum D4, Quantum D6Q, Quantum D6, Quantum T8, Quantum T6
-    are same in all respects. Only the model name and appearance is different.
-    The model WS-WN536A8 is the tested sample. "
-https://fccid.io/NZ3-WN536A8/Letter/Model-Difference-Statement-3975614
+    <br>• WS-WN536A8, WS-WN533A8, ARK T6, Quantum Max, Quantum T10, Quantum T12,
+    <br>• Quantum D4C, Quantum D4, Quantum D6Q, Quantum D6, Quantum T8, Quantum T6
+    <br>are same in all respects. Only the model name and appearance is different.
+    <br>The model WS-WN536A8 is the tested sample. "
+<br><p>https://fccid.io/NZ3-WN536A8/Letter/Model-Difference-Statement-3975614
 
-ALL THE MORE REASON than ever to wipe that firmware and install fresh openwrt.
+<br><p>ALL THE MORE REASON than ever to wipe that firmware and install fresh openwrt.
 
-## Bubba finally destroy stock firmware and destroy the flash, but fix it easy with luci intact!
-## Thanks everyone mentioned below and those who I don't know yet to credit.. .. So glad this got done! 
-## Jetstream-AC3000 ## EMATIC ERAC3000 ## WAVLINK ## WINSTAR ## WINSTARS 
+### Bubba finally destroy stock firmware and destroy the flash, but fix it easy with luci intact!
+### Thanks everyone mentioned below and those who I don't know yet to credit.. .. So glad this got done! 
+### Jetstream-AC3000 ## EMATIC ERAC3000 ## WAVLINK ## WINSTAR ## WINSTARS 
 
 Instructions to work for the above router Openwrt for Jetstream AC3000 Tri-Band EMATIC Winstars WS-WN536A8 ( Or from any model type above FCC Model Statement, as they are all the same)
 
